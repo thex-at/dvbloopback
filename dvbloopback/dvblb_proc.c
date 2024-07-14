@@ -30,6 +30,10 @@
 #include <linux/proc_fs.h>
 #include "dvblb_internal.h"
 
+// steama00 - patch to compile error on kernel 6.8.0
+#define PDE_DATA pde_data
+// steama00 - end 
+
 static struct proc_dir_entry *procdir;
 
 static int dvblb_procfs_read(struct seq_file *s, void* v)
